@@ -1,0 +1,106 @@
+{
+  "locations": [
+    {
+      "id": 1,
+      "name": "Wills Kennels",
+      "location": "Nashville west location",
+      "Address": "1081 General George Patton Rd"
+    },
+    {
+      "id": 2,
+      "name": "Katherine's catch and release Turtle Shop",
+      "location": "Nashville North location",
+      "Address": "560 Maturin Way"
+    },
+    {
+      "id": 3,
+      "name": "Rileys Animal Rehab",
+      "location": "Nashville South location",
+      "Address": "350 Wounded Paw Drive"
+    },
+    {
+      "id": 4,
+      "name": "Joan's kick a puppy store",
+      "location": "Nashville East location",
+      "Address": "7500 Madeup Address lane"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Jessica Younker"
+    },
+    {
+      "id": 2,
+      "name": "Jordan Nelson"
+    },
+    {
+      "id": 3,
+      "name": "Zoe LeBlanc"
+    },
+    {
+      "id": 4,
+      "name": "Blaise Roberts"
+    }
+  ],
+  "animals": [
+    {
+      "id": 1,
+      "name": "Sam",
+      "type": "Dog"
+    },
+    {
+      "id": 3,
+      "name": "Phil",
+      "type": "GroundHog"
+    },
+    {
+      "name": "Bob",
+      "breed": "Badger",
+      "id": 8
+    },
+    {
+      "name": "Hermoine",
+      "breed": "Cat",
+      "employeeId": 1,
+      "id": 9
+    }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "name": "Lavar",
+      "phoneNumber": "6155558666"
+    },
+    {
+      "id": 2,
+      "name": "Jane",
+      "phoneNumber": "6155558666"
+    },
+    {
+      "id": 3,
+      "name": "Mike",
+      "phoneNumber": "6155558666"
+    },
+    {
+      "id": 4,
+      "name": "Shannon",
+      "phoneNumber": "6155558666"
+    },
+    {
+      "id": 5,
+      "name": "Sarah",
+      "phoneNumber": "6155558666"
+    },
+    {
+      "id": 6,
+      "name": "Brian",
+      "phoneNumber": "6155558666"
+    },
+    {
+      "id": 7,
+      "name": "Dan",
+      "phoneNumber": "6155558666"
+    }
+  ]
+}
