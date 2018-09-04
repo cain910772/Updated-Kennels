@@ -25,9 +25,10 @@ export default class Login extends Component {
         e.preventDefault()
         this.setState({
             inputEmail: '',
-            inputPassword: ''
+            inputPassword: '',
+          
         })
-
+        
         /*
             For now, just store the email and password that
             the customer enters into local storage.
@@ -42,8 +43,10 @@ export default class Login extends Component {
                 password: this.state.password
             })
         )
-    }
-
+    
+        this.props.history.push("/locations")
+        alert("Logged In")
+        }
     render() {
         return (
             <form onSubmit={this.handleLogin}>

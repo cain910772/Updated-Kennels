@@ -28,42 +28,30 @@
   "employees": [
     {
       "id": 1,
-      "name": "Jessica Younker"
+      "name": "Jessica Younker",
+      "animalId": 3
     },
     {
       "id": 2,
-      "name": "Jordan Nelson"
-    },
-    {
-      "id": 3,
-      "name": "Zoe LeBlanc"
-    },
-    {
-      "id": 4,
-      "name": "Blaise Roberts"
+      "name": "Jordan Nelson",
+      "animalId": 4
     }
   ],
   "animals": [
     {
-      "id": 1,
-      "name": "Sam",
-      "type": "Dog"
-    },
-    {
-      "id": 3,
-      "name": "Phil",
-      "type": "GroundHog"
-    },
-    {
-      "name": "Bob",
+      "name": "Alfred",
       "breed": "Badger",
-      "id": 8
+      "id": 3
     },
     {
       "name": "Hermoine",
       "breed": "Cat",
-      "employeeId": 1,
-      "id": 9
+      "id": 4
+    },
+    {
+      "name": "Leroyyyy",
+      "breed": "Badger",
+      "id": 5
     }
   ],
   "owners": [

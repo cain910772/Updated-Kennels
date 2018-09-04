@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-export default class EmployeeList extends Component {
+export default class Assignments extends Component {
     render() {
 
 
@@ -12,6 +12,8 @@ export default class EmployeeList extends Component {
                         <div id={`employees--${employees.id}`} key={employees.id}>
                             {employees.name}
                             {employees.animalId}
+                            console.log(animalId);
+                            
                         </div>
                     )
                 }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './animal.css'
-// import dog from "./DogIcon.png"
 import { Link } from "react-router-dom"
 
 export default class AnimalList extends Component {
@@ -21,7 +20,7 @@ export default class AnimalList extends Component {
                                           return <div key={animal.id} className="card">
                                                 <div className="card-body">
                                                       <h5 className="card-title">
-                                                            {animal.name} the {animal.type} 
+                                                            {animal.name} the {animal.breed}
                                                             <Link className="nav-link" to={`/animals/${animal.id}`}>Details</Link>
                                                             <button onClick={() => this.props.deleteAnimal(animal.id)}
                                                                   className="button">Delete</button>

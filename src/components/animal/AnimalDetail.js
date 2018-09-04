@@ -1,11 +1,14 @@
 import React, { Component } from "react"
 import "./animal.css"
+import AnimalManager from "../../modules/AnimalManager";
+
 
 
 
 export default class AnimalDetail extends Component {
     state = {
         animal: {},
+        employees :{},
         edit: false,
     }
 
@@ -30,6 +33,7 @@ export default class AnimalDetail extends Component {
             const animal = {
                 name: this.state.animal.name,
                 breed: this.state.animal.breed,
+            
 
             }
 
@@ -41,14 +45,28 @@ export default class AnimalDetail extends Component {
 
     componentDidMount = () => {
         const animal = this.props.animals.find(a => a.id === parseInt(this.props.match.params.animalId, 0)) || {}
-        animal.employeeId = this.props.employees.find(e => e.name === animal.employeeId);
+        animal.employeeId = this.props.employees.find(e => e.name === animal.employee);
 
         this.setState({ animal })
     }
 
-    render() {
+    componentDidMount() {
 
-        // const animal = this.props.animals.find(a => a.id === parseInt(this.props.match.params.animalId, 0)) || {}
+        const newState = {}
+    AnimalManager.getAll()
+    .then(animals => newState.animals = animals)
+    .then(() => fetch("http://localhost:5002/employees")
+          .then(r => r.json()))
+    .then(employees => newState.employees = employees)
+    .then(() => this.setState(newState, () => {
+        if(this.employees.animalId===this.animal.id);
+        {
+            <h3>{this.employees.name}</h3>
+        }
+
+    }))}
+      
+render() {
 
         return (
             <section className="animal">
@@ -63,9 +81,9 @@ export default class AnimalDetail extends Component {
                                 value={this.state.animal.name} />
                             :
                             <h4 className="card-title">
-                                <h5>Animal Helper: {this.state.employeeID}</h5>
-                                <h5>Animals Name: {this.state.animal.name}</h5>
-                                <h5>Animal Type: {this.state.animal.type}</h5>
+                            
+                                <p>Animals Name: {this.state.animal.name}</p>
+                                <p>Animal Type: {this.state.animal.type}</p>
                             </h4>
                         }
                         <h6 className="card-title">{this.state.animal.breed}</h6>
@@ -86,5 +104,5 @@ export default class AnimalDetail extends Component {
                 </div>
             </section>
         )
-    }
+          }
 }

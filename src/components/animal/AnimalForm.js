@@ -6,10 +6,10 @@ export default class AnimalForm extends Component {
       state = {
             animalName: "",
             breed: "",
-            employee: ""
+            employeeId: ""
       }
 
-      // Update state whenever an input field is edited
+      // Update state whenever a input field is edited
       handleFieldChange = evt => {
             console.log("evt handleFieldChange", evt);
             const stateToChange = {}
@@ -25,7 +25,7 @@ export default class AnimalForm extends Component {
                   const animal = {
                         name: this.state.animalName,
                         breed: this.state.breed,
-                        employeeId: this.props.employees.find(e => e.name === this.state.employee).id
+                        employeeId: this.props.employees.find(e => e.name === this.state.employeeId)
                   }
 
 

@@ -3,6 +3,11 @@ import { Link } from "react-router-dom"
 import "./NavBar.css"
 
 
+function logout() {
+     localStorage.clear();
+
+}
+
 class NavBar extends Component {
     render() {
         return (
@@ -23,6 +28,14 @@ class NavBar extends Component {
                     <li className="nav-item">
                         <Link className="nav-link" to="/owners">Owners</Link>
                     </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/Assignments">Assignments   </Link> </li>
+                        
+                       
+                 
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/Login"><div onClick={logout}>Logout</div></Link>
+                        </li>
                 </ul>
             </nav>
         )

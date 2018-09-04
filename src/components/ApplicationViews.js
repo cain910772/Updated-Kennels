@@ -10,6 +10,7 @@ import OwnersList from './owners/OwnersList';
 import AnimalManager from '../modules/AnimalManager';
 import Login from './Login'
 
+
 class ApplicationViews extends Component {
 
       isAuthenticated = () => localStorage.getItem("credentials") !== null
