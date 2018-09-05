@@ -9,7 +9,7 @@ export default class AnimalDetail extends Component {
     state = {
         animal: {},
         employees :{},
-        edit: false,
+        // edit: false,
     }
 
     handleEditClicked = () => {
@@ -21,7 +21,7 @@ export default class AnimalDetail extends Component {
     handleFieldChange = (whichOne, evt) => {
         const updateAnimal = this.state.animal;
         const stateToChange = whichOne
-        updateAnimal[stateToChange] = evt.target.value
+        // updateAnimal[stateToChange] = evt.target.value
         this.setState({ updateAnimal })
     }
 
@@ -59,13 +59,10 @@ export default class AnimalDetail extends Component {
           .then(r => r.json()))
     .then(employees => newState.employees = employees)
     .then(() => this.setState(newState, () => {
-        if(this.employees.animalId===this.animal.id);
-        {
-            <h3>{this.employees.name}</h3>
-        }
-
+       newState: newState
+       console.log({newState:newState});
     }))}
-      
+
 render() {
 
         return (
@@ -81,6 +78,16 @@ render() {
                                 value={this.state.animal.name} />
                             :
                             <h4 className="card-title">
+                            <p> <div className="form-group">
+                                    <label htmlFor="employee">Assign to caretaker</label>
+                                    <select defaultValue="" name="employee" id="employee"
+                                          onChange={this.handleFieldChange}>
+                                          <option value="">Select an employee</option>
+                                          {
+                                                this.props.employees.map(e => <option key={e.id} id={e.id}>{e.name}</option>)
+                                          } </select> </div></p>
+                                         
+                         
                             
                                 <p>Animals Name: {this.state.animal.name}</p>
                                 <p>Animal Type: {this.state.animal.type}</p>

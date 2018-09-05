@@ -28,30 +28,46 @@
   "employees": [
     {
       "id": 1,
-      "name": "Jessica Younker",
-      "animalId": 3
+      "name": "Augdin Mcgillicuttys",
+      "animalId": 1
     },
     {
       "id": 2,
       "name": "Jordan Nelson",
+      "animalId": 2
+    },
+    {
+      "id": 3,
+      "name": "Speedy Gonzales",
+      "animalId": 3
+    },
+    {
+      "id": 4,
+      "name": "Bugs Bunny",
       "animalId": 4
     }
+    
   ],
   "animals": [
-    {
-      "name": "Alfred",
-      "breed": "Badger",
-      "id": 3
-    },
     {
       "name": "Hermoine",
       "breed": "Cat",
       "id": 4
     },
     {
+      "name": "Spanky",
+      "breed": "Cat",
+      "id": 3
+    },
+    {
       "name": "Leroyyyy",
       "breed": "Badger",
-      "id": 5
+      "id": 2
+    },
+    {
+      "name": "One eye crow",
+      "breed": "Dog",
+      "id": 1
     }
   ],
   "owners": [
